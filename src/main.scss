@@ -1,0 +1,31 @@
+$border-color: #aaaaaa;
+
+body {
+  background-color: #2d2d2d;
+  color: white;
+  font-size: 2rem;
+}
+
+.tracks {
+  margin: 10px 20px;
+  list-style-type: none;
+}
+
+.track {
+  position: relative;
+  padding: 5px 15px;
+  border-bottom: 1px solid $border-color;
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.duration {
+  position: absolute;
+  right: 5px;
+}
+
+.selected {
+  background-color: #5d5d5d;
+}
