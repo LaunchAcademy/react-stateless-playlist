@@ -18,23 +18,14 @@ const Track = props => {
   );
 }
 
-let trackOne = <li className="track">
-  <i className="fa fa-play-circle-o" />
-  <span className="title">Talking Heads - Found A Job</span>
-  <span className="duration">4:30</span>
-</li>;
+let trackOne = <Track
+  title="Talking Heads - Found A Job"
+  playing={false}
+  duration={"4:30"}
+/>;
 
-let trackTwo = <li className="track">
-  <i className="fa fa-play-circle-o" />
-  <span className="title">Phoenix - Entertainment</span>
-  <span className="duration">3:40</span>
-</li>;
-
-let trackThree = <li className="track">
-  <i className="fa fa-pause-circle-o" />
-  <span className="title">Chrome Sparks - Moonraker</span>
-  <span className="duration">6:04</span>
-</li>;
+let trackTwo = <Track title="Phoenix - Entertainment" playing={false} duration={"3:40"} />;
+let trackThree = <Track title="Chrome Sparks - Moonraker" playing={true} duration={"6:04"} />;
 
 ReactDOM.render(
   <ul className="tracks">
@@ -43,4 +34,4 @@ ReactDOM.render(
     {trackThree}
   </ul>,
   document.getElementById('app')
-)
+);
