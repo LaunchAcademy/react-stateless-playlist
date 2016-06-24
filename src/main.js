@@ -8,11 +8,11 @@ let trackOne = <Track title="Talking Heads - Found A Job" playing={false} durati
 let trackTwo = <Track title="Phoenix - Entertainment" playing={false} duration={"3:40"} />;
 let trackThree = <Track title="Chrome Sparks - Moonraker" playing={true} duration={"6:04"} />;
 
+let tracks = [trackOne, trackTwo, trackThree];
+
 ReactDOM.render(
   <ul className="tracks">
-    {trackOne}
-    {trackTwo}
-    {trackThree}
+    {tracks}
   </ul>,
   document.getElementById('app')
 );
