@@ -4,11 +4,21 @@ import ReactDOM from 'react-dom';
 
 import Track from './components/Track.js';
 
-let trackOne = <Track title="Talking Heads - Found A Job" playing={false} duration={"4:30"} />;
-let trackTwo = <Track title="Phoenix - Entertainment" playing={false} duration={"3:40"} />;
-let trackThree = <Track title="Chrome Sparks - Moonraker" playing={true} duration={"6:04"} />;
+let data = [
+  { title: "Talking Heads - Found A Job", playing: false, duration: "4:30" },
+  { title: "Phoenix - Entertainment", playing: false, duration: "3:40" },
+  { title: "Chrome Sparks - Moonraker", playing: true, duration: "6:04" }
+];
 
-let tracks = [trackOne, trackTwo, trackThree];
+let tracks = data.map(track => {
+  return(
+    <Track
+      title={track.title}
+      playing={track.playing}
+      duration={track.duration}
+    />
+  );
+});
 
 ReactDOM.render(
   <ul className="tracks">
