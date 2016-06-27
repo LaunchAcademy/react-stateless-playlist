@@ -2,27 +2,15 @@ import './main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Track from './components/Track.js';
+import Playlist from './components/Playlist.js';
 
 let data = [
-  { title: "Talking Heads - Found A Job", playing: false, duration: "4:30" },
-  { title: "Phoenix - Entertainment", playing: false, duration: "3:40" },
-  { title: "Chrome Sparks - Moonraker", playing: true, duration: "6:04" }
+  { id: 1, title: "Talking Heads - Found A Job", playing: false, duration: "4:30" },
+  { id: 2, title: "Phoenix - Entertainment", playing: false, duration: "3:40" },
+  { id: 3, title: "Chrome Sparks - Moonraker", playing: true, duration: "6:04" }
 ];
 
-let tracks = data.map(track => {
-  return(
-    <Track
-      title={track.title}
-      playing={track.playing}
-      duration={track.duration}
-    />
-  );
-});
-
 ReactDOM.render(
-  <ul className="tracks">
-    {tracks}
-  </ul>,
+  <Playlist data={data} />,
   document.getElementById('app')
 );
